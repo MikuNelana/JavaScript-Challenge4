@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript - Change Number to Minutes and Hours</title>
+  <style>
+    body{
+      text-align: center;
+      background-color: teal;
+      margin-top: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Number Convertor</h1>
+  <p>Check Console for returns</p>
+  <script>
+    function convertToTime(num){
+      var hours;
+      var minutes;
+
+      hours = Math.floor(num / 60);  // To round the number 'downward' to its nearest integer
+      minutes = num % 60; // To find num's reminder to 60 minutes(an hour)
+      return hours + 'h ' + minutes +"min";
+    }
+    window.console.log(convertToTime(-458));
+    window.console.log(convertToTime(98));
+    window.console.log(convertToTime(15.00));
+    window.console.log(convertToTime(800));
+    window.console.log(convertToTime(0.65));
+
+  </script>
+</body>
+
+</html>
